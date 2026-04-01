@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import TaskInput from "./components/TaskInput";
 import TaskList from "./components/TaskList";
 import Filter from "./components/Filter";
-
+import ChatBot from "./components/ChatBot";
 const App = () => {
   const [tasks, setTasks] = useState(() => {
     const saved = localStorage.getItem("tasks");
@@ -59,6 +59,7 @@ const App = () => {
         toggleTask={toggleTask}
         deleteTask={deleteTask}
       />
+      <ChatBot tasks={tasks} />
     </div>
   );
 };
